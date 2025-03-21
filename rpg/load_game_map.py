@@ -25,11 +25,13 @@ class GameMap:
     background_color = arcade.color.AMAZON
 
 background_music=False
+background_player=""
 def load_map(map_name):
     """
     Load a map
     """
     global background_music
+    global background_player
     game_map = GameMap()
     game_map.map_layers = OrderedDict()
 
@@ -61,7 +63,7 @@ def load_map(map_name):
     game_map.scene = arcade.Scene.from_tilemap(my_map)
     if not background_music:
         background_music = arcade.load_sound(":sounds:100-8bit-hyrule-field-tp-101soundboards.mp3")  # Asegúrate de que la ruta sea correcta
-        background_player=arcade.play_sound(background_music, looping=True, volume=0.5)
+        background_player=arcade.play_sound(background_music, looping=True, volume=0.6)
         background_music = True
 
     if "characters" in my_map.object_lists:

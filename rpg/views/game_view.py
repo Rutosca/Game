@@ -11,6 +11,9 @@ import arcade.gui
 import rpg.constants as constants
 from arcade.experimental.lights import Light
 from pyglet.math import Vec2
+
+from rpg.load_game_map import background_music, background_player #Se importa la variable desde load_game_map
+
 from rpg.message_box import MessageBox
 from rpg.sprites.player_sprite import PlayerSprite
 
@@ -128,8 +131,12 @@ class GameView(arcade.View):
     Main application class.
     """
 
+
     def __init__(self, map_list):
         super().__init__()
+        self.coin_sound = arcade.load_sound(":sounds:item-pick-up.mp3")#variable para almacenar sonido de recoger item
+        self.items_collected = 0#variable para contar items recogidos
+        self.time_of_day = "day"#variable para cambiar día y noche
 
         arcade.set_background_color(arcade.color.AMAZON)
 
@@ -325,12 +332,20 @@ class GameView(arcade.View):
             text = f"     {item_name}"
             arcade.draw_text(text, x, y, arcade.color.ALLOY_ORANGE, 16)
 
+    def toggle_time_of_day(self):
+        self.time_of_day = "night" if self.time_of_day == "day" else "day"
+
     def on_draw(self):
         """
         Render the screen.
         """
+        #logica dia/noche
+        if self.time_of_day == "night":
+            self.my_map.light_layer.ambient_color = (50, 50, 50)  # Oscurece el mapa
+        else:
+            self.my_map.light_layer.ambient_color = (255, 255, 255)
 
-        # This command should happen before we start drawing. It will clear
+            # This command should happen before we start drawing. It will clear
         # the screen to the background color, and erase what we drew last frame.
         arcade.start_render()
         cur_map = self.map_list[self.cur_map_name]
@@ -385,6 +400,8 @@ class GameView(arcade.View):
 
         # draw GUI
         self.ui_manager.draw()
+
+        arcade.draw_text(f"Items: {self.items_collected}", 10, self.window.height - 30, arcade.color.WHITE, 18)#texto de items recogidos
 
     def scroll_to_player(self, speed=constants.CAMERA_SPEED):
         """Manage Scrolling"""
@@ -525,6 +542,9 @@ class GameView(arcade.View):
                     map_name = doors_hit[0].properties["map_name"]
                     start_x = doors_hit[0].properties["start_x"]
                     start_y = doors_hit[0].properties["start_y"]
+
+
+
                 except KeyError:
                     raise KeyError(
                         "Door objects must have 'map_name', 'start_x', and 'start_y' properties defined."
@@ -599,6 +619,7 @@ class GameView(arcade.View):
 
     def search(self):
         """Search for things"""
+
         map_layers = self.map_list[self.cur_map_name].map_layers
         if "searchable" not in map_layers:
             print(f"No searchable sprites on {self.cur_map_name} map layer.")
@@ -614,6 +635,10 @@ class GameView(arcade.View):
                 self.message_box = MessageBox(
                     self, f"Found: {sprite.properties['item']}"
                 )
+
+                arcade.play_sound(self.coin_sound)#sonido añadido para buscar cosas
+                self.items_collected += 1#contador de items recogidos
+
                 sprite.remove_from_sprite_lists()
                 lookup_item = self.item_dictionary[sprite.properties["item"]]
                 self.player_sprite.inventory.append(lookup_item)
