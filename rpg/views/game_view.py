@@ -183,7 +183,7 @@ class GameView(arcade.View):
         # Create a small white light
         x = 100
         y = 200
-        radius = 150
+        radius = 300
         mode = "soft"
         color = arcade.csscolor.WHITE
         self.player_light = Light(x, y, radius, color, mode)
@@ -237,7 +237,7 @@ class GameView(arcade.View):
         """Set up the game variables. Call to re-start the game."""
 
         # Create the player character
-        self.player_sprite = PlayerSprite(":characters:Female/Female 18-4.png")
+        self.player_sprite = PlayerSprite(":characters:Male/Male 02-2.png")
 
         # Spawn the player
         start_x = constants.STARTING_X
