@@ -105,6 +105,34 @@
                  "width":32,
                  "x":224,
                  "y":770
+                }, 
+                {
+                 "gid":5,
+                 "height":32,
+                 "id":12,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"map_name",
+                         "type":"string",
+                         "value":"woods_a"
+                        }, 
+                        {
+                         "name":"start_x",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"start_y",
+                         "type":"int",
+                         "value":16
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":82,
+                 "x":614.5,
+                 "y":34
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -170,7 +198,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJzt2UtOg1AUxvGDHdaZ7sPH0CFx5BLcjTqybsGJj4k6ahsHxjjwMTG6FBfhIeEmt\/QUJAK3XP6\/5AvJhZDzFUpIGIvIpmb8z21mR7OrSTV70g9bmu0GtmnhvH3p35bi7wGgnv2N5QxJ7P2tfn4OjMSkqn9qJCbW9fVTt\/9c81QzIVn9qlJm2s3YjanqemSkTGz9T5PFnCXl57P6X7YyeTOs6+vnr\/3du7bV\/7at4RtwkvfKFLv6cfv9\/qkXp2\/3\/7n2meSdJsnquP0XFff\/s9jP+MfCcS+yHs9\/AOvjXfPp5SNffws2Ubdea67Hhv7LDlesx+hLFv\/\/Lt8hhwIA8E0NAAAAAACYrkYi15qbUehJunesne8095qHAfbPTLX3TDMfaH+I\/IQeAAAAAAAQ3C9NLlfm",
+         "data":"eJzt2TtOw0AUheFrUoYONgIlpUXFEtgNUBG2QMOjAaoQpUCIgkeDYCksghvJI00mNzYWtscZ\/590ZGlsWffEjmXJYxHZ1oz\/uQ3tGWt9tKPZbWCbB+fdlP5tCX8PAPXsb61mSFLvb\/Xzc2AkJVX9cyMpsa6vn7r9Z5qnmonJ6leVMtNuxm5MVdcjI2VS63+aLecsKz+f1f+ylcmbYV1fP3\/t7961rf63bQ3fgJOi10LY1Y\/b7\/fPvTibdv+fa59J0WmSrY\/bf1Fx\/z+L\/YyfB8e9SD+e\/wD6413z6eWjWH+LNlG3Xmuup4b+qw7XrKfoS5b\/\/y7fMYcCAPBNDQAAAAAAmK5GIteam1HsSbp3rJ3vNPeahwH2X5hq70fNbKD9IfITewAAAAAAQHS\/PXJXRQ==",
          "encoding":"base64",
          "height":64,
          "id":8,
@@ -420,26 +448,26 @@
          "y":0
         }],
  "nextlayerid":16,
- "nextobjectid":12,
+ "nextobjectid":13,
  "orientation":"orthogonal",
  "renderorder":"left-up",
- "tiledversion":"1.8.4",
+ "tiledversion":"1.11.2",
  "tileheight":32,
  "tilesets":[
         {
          "firstgid":1,
-         "source":"..\/tilesets\/[Base]BaseChip_pipo.json"
+         "source":"..\/..\/..\/plantilla-2025-Equipo-E\/resources\/tilesets\/[Base]BaseChip_pipo.json"
         }, 
         {
          "firstgid":1065,
-         "source":"..\/tilesets\/[A]Water_pipo.json"
+         "source":"..\/..\/..\/plantilla-2025-Equipo-E\/resources\/tilesets\/[A]Water_pipo.json"
         }, 
         {
          "firstgid":4137,
-         "source":"..\/tilesets\/[A]Grass_pipo.json"
+         "source":"..\/..\/..\/plantilla-2025-Equipo-E\/resources\/tilesets\/[A]Grass_pipo.json"
         }],
  "tilewidth":32,
  "type":"map",
- "version":"1.8",
+ "version":"1.10",
  "width":64
 }

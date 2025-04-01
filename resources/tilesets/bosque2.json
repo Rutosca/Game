@@ -1,0 +1,14 @@
+{ "columns":8,
+ "image":"bosque2.png",
+ "imageheight":6000,
+ "imagewidth":256,
+ "margin":0,
+ "name":"bosque2",
+ "spacing":0,
+ "tilecount":1496,
+ "tiledversion":"1.11.2",
+ "tileheight":32,
+ "tilewidth":32,
+ "type":"tileset",
+ "version":"1.10"
+}

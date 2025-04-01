@@ -30,6 +30,7 @@ def load_map(map_name):
     """
     Load a map
     """
+
     global background_music
     global background_player
     game_map = GameMap()
@@ -42,9 +43,11 @@ def load_map(map_name):
     layer_options = {
         "trees_blocking": {
             "use_spatial_hash": True,
+            "hit_box_algorithm": "Simple"  # Evita cálculo automático
         },
         "misc_blocking": {
             "use_spatial_hash": True,
+
         },
         "bridges": {
             "use_spatial_hash": True,
@@ -54,6 +57,8 @@ def load_map(map_name):
         },
     }
 
+
+
     # Read in the tiled map
     print(f"Loading map: {map_name}")
     my_map = arcade.tilemap.load_tilemap(
@@ -62,9 +67,11 @@ def load_map(map_name):
 
     game_map.scene = arcade.Scene.from_tilemap(my_map)
     if not background_music:
-        background_music = arcade.load_sound(":sounds:100-8bit-hyrule-field-tp-101soundboards.mp3")  # Asegúrate de que la ruta sea correcta
-        background_player=arcade.play_sound(background_music, looping=True, volume=0.6)
+        background_music = arcade.load_sound(":sounds:zelda-song-101soundboards.mp3")  # Asegúrate de que la ruta sea correcta
+        background_player=arcade.play_sound(background_music, looping=True, volume=0.0)
         background_music = True
+
+
 
     if "characters" in my_map.object_lists:
         f = open("../resources/data/characters_dictionary.json")
@@ -175,6 +182,13 @@ def load_map(map_name):
             game_map.scene.remove_sprite_list_by_object(sprite_list)
 
             game_map.scene["wall_list"].extend(sprite_list)
+
+    print(f"Map loaded: {map_name}")
+    print(f"Layers: {list(game_map.map_layers.keys())}")
+    print(f"Wall list sprites: {len(game_map.scene['wall_list'])}")
+
+
+
 
     return game_map
 

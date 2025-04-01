@@ -222,6 +222,7 @@ class GameView(arcade.View):
             self.my_map.light_layer.resize(self.window.width, self.window.height)
 
     def setup_physics(self):
+
         if self.noclip_status:
             # make an empty spritelist so the character does not collide with anyting
             self.physics_engine = arcade.PhysicsEngineSimple(
@@ -232,6 +233,8 @@ class GameView(arcade.View):
             self.physics_engine = arcade.PhysicsEngineSimple(
                 self.player_sprite, self.my_map.scene["wall_list"]
             )
+            
+
 
     def setup(self):
         """Set up the game variables. Call to re-start the game."""
@@ -558,6 +561,8 @@ class GameView(arcade.View):
         else:
             # No doors, scroll normally
             self.scroll_to_player()
+
+
 
     def on_key_press(self, key, modifiers):
         """Called whenever a key is pressed."""
