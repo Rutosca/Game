@@ -335,18 +335,14 @@ class GameView(arcade.View):
             text = f"     {item_name}"
             arcade.draw_text(text, x, y, arcade.color.ALLOY_ORANGE, 16)
 
-    def toggle_time_of_day(self):
-        self.time_of_day = "night" if self.time_of_day == "day" else "day"
+
 
     def on_draw(self):
         """
         Render the screen.
         """
-        #logica dia/noche
-        if self.time_of_day == "night":
-            self.my_map.light_layer.ambient_color = (50, 50, 50)  # Oscurece el mapa
-        else:
-            self.my_map.light_layer.ambient_color = (255, 255, 255)
+
+
 
             # This command should happen before we start drawing. It will clear
         # the screen to the background color, and erase what we drew last frame.

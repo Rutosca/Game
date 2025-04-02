@@ -125,13 +125,13 @@
                         {
                          "name":"start_y",
                          "type":"int",
-                         "value":16
+                         "value":18
                         }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":82,
-                 "x":614.5,
+                 "width":91.5,
+                 "x":609,
                  "y":34
                 }],
          "opacity":1,
@@ -170,7 +170,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJzt2kEOgjAQBdDKjUQxatx6Fj2OJ9CdrjRexvuYRom1gZbQls50\/ksmSlTorwMBUSkAgG7N93GVafvzTNs16TlImX+bcN0wTqN+vU\/dJtF6ueSHOFzHuRS9EHps7\/r82SrtYpR2M8pUK\/49f7VKG5q\/BA+rNEn5n1bZ1tMOZ3K+\/BSdZmGvg9vds+xSxxxIIArXQgAlO1b\/j5LoY93Byi9tHtq8e2sZINQu9wAAJkLpvJkyzBNtlL8fadeDXXlz3zuj3B8gA\/d7FjHEmAPsyzxx7f+h465V2b3Zly1mZk7\/50gF+eV5VZ9qlTwHywHvKTm\/aZF7AAzl6A3XNin2auzzEF9GinMQUwnnJTHGz30OTGP2kdR90PQ8L1n7e6GUvOCHXgAAAADp3uZ9LSU=",
+         "data":"eJzt2kEOgjAQBdBK4p6riELQuPUsehxPoDtdabyM99FGibUBSuiUTtv\/kgaNCv3jQEAUgk6VCzF\/L+uccKUA4E35XVaetr\/wtF2VrIHL\/BuH64ZxSvHrfe7WjtYbSn6g0Xecc9ELtsf2ts+ftCGdlSFdlaEqRPg9f9GGNDR\/DO7akFLK\/9CGrp52OpMz5efoOLN7HfrdDM\/7FJQTscThWgggZofsf5kSeazba\/lTq0OTd6c9B7C19T0BgIlwOm\/mDHXijfP3k9r1YFte3\/fOOPcHpCH0exYUKGqAfTlMofb\/0HkXIu7e7MpGmTmk\/3O4gvzpeWaf0Yi5BqsB74k5v2rpewIB8tEbfdvk2KvU5yGmjBxrQCmG8xKK+YdeA9WYfcR1H5Qdj2PW\/F6YSl4wQy8AAABA6l56kC24",
          "encoding":"base64",
          "height":64,
          "id":9,
@@ -411,12 +411,12 @@
                          "type":"string",
                          "value":"orange_dog"
                         }],
-                 "rotation":0,
+                 "rotation":0.103390187748589,
                  "type":"",
                  "visible":true,
                  "width":0,
-                 "x":25.3333333333333,
-                 "y":1825.33333333333
+                 "x":23.7169291309533,
+                 "y":1823.52617225299
                 }, 
                 {
                  "height":0,
