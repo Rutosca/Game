@@ -365,6 +365,8 @@ class GameView(arcade.View):
             # Draw scene
             cur_map.scene.draw()
 
+
+
             for item in map_layers.get("searchable", []):
                 arcade.Sprite(
                     filename=":misc:shiny-stars.png",
@@ -373,8 +375,15 @@ class GameView(arcade.View):
                     scale=0.8,
                 ).draw()
 
+
             # Draw the player
             self.player_sprite_list.draw()
+
+
+            if map_layers.get("walls_nonblocking",[]):
+                self.map_list[self.cur_map_name].map_layers["walls_nonblocking"].draw()
+
+
 
         if cur_map.light_layer:
             # Draw the light layer to the screen.
@@ -386,6 +395,7 @@ class GameView(arcade.View):
             else:
                 ambient_color = arcade.color.WHITE
             cur_map.light_layer.draw(ambient_color=ambient_color)
+
 
         # Use the non-scrolled GUI camera
         self.camera_gui.use()
