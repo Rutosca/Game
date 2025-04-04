@@ -375,6 +375,12 @@ class GameView(arcade.View):
                     scale=0.8,
                 ).draw()
 
+            if map_layers.get("bridges",[]):
+                self.map_list[self.cur_map_name].map_layers["bridges"].draw()
+            if map_layers.get("bridges2",[]):
+                self.map_list[self.cur_map_name].map_layers["bridges2"].draw()
+
+
 
             # Draw the player
             self.player_sprite_list.draw()
