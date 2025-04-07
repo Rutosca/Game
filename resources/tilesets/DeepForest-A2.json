@@ -1,0 +1,14 @@
+{ "columns":16,
+ "image":"DeepForest-A2.png",
+ "imageheight":384,
+ "imagewidth":512,
+ "margin":0,
+ "name":"DeepForest-A2",
+ "spacing":0,
+ "tilecount":192,
+ "tiledversion":"1.11.2",
+ "tileheight":32,
+ "tilewidth":32,
+ "type":"tileset",
+ "version":"1.10"
+}
