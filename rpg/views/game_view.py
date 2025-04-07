@@ -366,7 +366,6 @@ class GameView(arcade.View):
             cur_map.scene.draw()
 
 
-
             for item in map_layers.get("searchable", []):
                 arcade.Sprite(
                     filename=":misc:shiny-stars.png",
